@@ -37,8 +37,8 @@ class DSTA():
             State[i, :] = temp
         return State
 
-    # 平移算子，产生候选解
-    def op_shift(self):
+    # 对称算子，产生候选解
+    def op_symmetry(self):
         State = np.zeros((self.SE,self.Dim),dtype = int)
         for i in range(self.SE):
             temp = self.Best.copy()
@@ -52,8 +52,8 @@ class DSTA():
             State[i,:] = temp
         return State
         
-    # 对称算子，产生候选解
-    def op_symmetry(self):
+    # 平移算子，产生候选解
+    def op_shift(self):
         State = np.zeros((self.SE,self.Dim),dtype = int)
         for i in range(self.SE):
             temp = self.Best.copy()
